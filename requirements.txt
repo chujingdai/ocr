@@ -1,0 +1,5 @@
+paddlepaddle>=3.0.0
+paddleocr>=2.8.0
+flask>=3.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0

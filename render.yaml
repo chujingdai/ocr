@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: paddle-ocr-api
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /ocr/health
+    envVars:
+      - key: OCR_API_PORT
+        value: 3001
+      - key: OCR_MAX_CONCURRENT
+        value: 2
+      - key: OCR_INTRA_THREADS
+        value: 4
+      - key: OCR_MAX_BODY_MB
+        value: 20
